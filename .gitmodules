@@ -1,3 +1,6 @@
 [submodule "SalientPosesReference"]
 	path = SalientPosesReference
 	url = git@github.com:richard-roberts/SalientPosesReference.git
+[submodule "SalientPosesPerformance"]
+	path = SalientPosesPerformance
+	url = git@github.com:richard-roberts/SalientPosesPerformance.git
