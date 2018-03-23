@@ -10,3 +10,6 @@
 [submodule "cgcmake"]
 	path = build/cgcmake
 	url = git@github.com:richard-roberts/cgcmake.git
+[submodule "AnimationData"]
+	path = tests/AnimationData
+	url = git@github.com:richard-roberts/AnimationData.git
