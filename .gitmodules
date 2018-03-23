@@ -7,3 +7,6 @@
 [submodule "SalientPosesMaya"]
 	path = SalientPosesMaya
 	url = git@github.com:richard-roberts/SalientPosesMaya.git
+[submodule "cgcmake"]
+	path = build/cgcmake
+	url = git@github.com:richard-roberts/cgcmake.git
