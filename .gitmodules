@@ -13,3 +13,6 @@
 [submodule "AnimationData"]
 	path = tests/AnimationData
 	url = git@github.com:richard-roberts/AnimationData.git
+[submodule "cmt"]
+	path = tests/cmt
+	url = git@github.com:richard-roberts/cmt.git
