@@ -1,0 +1,30 @@
+notifications:
+  email: false
+
+git:
+  submodules: false
+
+jobs:
+  include:
+    - stage: SalientPosesReference
+      language: python
+      python: "3.6"
+      before_install:
+        - sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
+        - git submodule update --init SalientPosesReference
+        - git submodule update --init tests/AnimationData
+      script:
+        - cd SalientPosesReference && python3 -m pytest && cd ..
+
+    - stage: SalientPosesPerformance
+      language: cpp
+      os: osx
+      osx_image: xcode9.2
+      before_install:
+        - brew install eigen
+        - sed -i '' -e 's/git@github.com:/https:\/\/github.com\//' .gitmodules # -i "" -e for OSX
+        - git submodule update --init SalientPosesPerformance
+        - git submodule update --init tests/AnimationData
+      script:
+          - ./build.sh
+          - cd SalientPosesPerformance && ./run-tests.sh
